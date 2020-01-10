@@ -24,7 +24,7 @@ export class TutorialState{
         return state.tutorials;
     }
 
-    //Here is an action that come from tutorial.action class.
+    //Here is an action that come from tutorial.action class...
     //make any bisness logic here which can change state or add any value on state
     //from any componnet, just call this action to make an action and write the state value.
     //call any service api layer here and add the value to state this layer.
