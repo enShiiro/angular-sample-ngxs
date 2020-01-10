@@ -1,0 +1,7 @@
+<div *ngFor="let tutorial of tutorials$ | async ">
+
+  <label>{{tutorial.name}}</label>
+</div>
+<input type="text" #name placeholder="name to delete">
+
+<button (click)="check(name.value)">check</button>

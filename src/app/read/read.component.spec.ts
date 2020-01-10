@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PortFolioComponent } from './port-folio.component';
+import { ReadComponent } from './read.component';
 
-describe('PortFolioComponent', () => {
-  let component: PortFolioComponent;
-  let fixture: ComponentFixture<PortFolioComponent>;
+describe('ReadComponent', () => {
+  let component: ReadComponent;
+  let fixture: ComponentFixture<ReadComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortFolioComponent ]
+      declarations: [ ReadComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PortFolioComponent);
+    fixture = TestBed.createComponent(ReadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

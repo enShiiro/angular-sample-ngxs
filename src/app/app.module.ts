@@ -6,27 +6,33 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from '../service/token-interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { RegisteredUserComponent } from './registered-user/registered-user.component';
-import { PortFolioComponent } from './modal/port-folio/port-folio.component';
+import { ReadComponent } from './read/read.component';
+import { CreateComponent } from './create/create.component';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsLoggerPluginModule} from '@ngxs/logger-plugin'
+import { TutorialStateModel, TutorialState } from './store/state/tutorial.state';
+import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    LoginPageComponent,
-    RegisteredUserComponent,
-    PortFolioComponent,
+    ReadComponent,
+    CreateComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    NgxsModule.forRoot([
+      TutorialState
+    ]),
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsLoggerPluginModule.forRoot()
 
   ],
 
